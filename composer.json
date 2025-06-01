@@ -1,0 +1,17 @@
+{
+    "name": "nicolas/phppoo",
+    "require": {
+        "symfony/var-dumper": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nicolas Tavares",
+            "email": "nic.jundiai@gmail.com"
+        }
+    ]
+}
