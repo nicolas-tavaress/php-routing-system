@@ -1,13 +1,15 @@
 <?php
 
-use app\library\Router;
+declare(strict_types=1);
 
-require '../vendor/autoload.php';
+use App\Routing\Router;
 
-// session_start();
+require dirname(__DIR__) . '/vendor/autoload.php';
 
-// $dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__, 2));
-// $dotenv->load();
+ini_set('display_errors', '1');
 
-ini_set('display_errors', 1);
 $router = new Router();
+
+require dirname(__DIR__) . '/routes/web.php';
+
+return $router;

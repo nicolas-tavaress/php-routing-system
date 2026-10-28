@@ -1,12 +1,36 @@
 {
-    "name": "nicolas/phppoo",
+    "name": "nicolas/php-routing-system",
+    "description": "Mini roteador MVC em PHP 8.5",
+    "type": "project",
+    "license": "proprietary",
     "require": {
-        "symfony/var-dumper": "^7.2"
+        "php": ">=8.5"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.3",
+        "phpunit/phpunit": "^13.4",
+        "symfony/var-dumper": "^8.1"
     },
     "autoload": {
         "psr-4": {
-            "app\\": "app/"
+            "App\\": "app/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8000 -t public"
+        ]
+    },
+    "config": {
+        "sort-packages": true
     },
     "authors": [
         {
